@@ -88,6 +88,13 @@ iOSInjectionProject/
 
 ## User settings
 xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/*
+xcworkspace
+project.xcworkspace
+*.xcodeproj/xcuserdata/*
+*.xcodeproj/xcuserdata/
+.DS_Store
+*.xcworkspace/xcuserdata/*
 
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
