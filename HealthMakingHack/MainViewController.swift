@@ -9,22 +9,27 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    @IBOutlet var progressView: UIProgressView?
+    @IBOutlet var progressLabel: UILabel?
+    @IBOutlet var ateButton: UIButton?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        progressView?.trackTintColor = UIColor.red
+        progressView?.progressTintColor = .blue
+        progressView?.setProgress(0.3, animated: false)
+        
+        progressLabel?.text = "1 / 3"
+        
+        ateButton?.backgroundColor = .blue
+        ateButton?.layer.borderWidth = 1.0
+        ateButton?.layer.borderColor = UIColor.black.cgColor
+        ateButton?.layer.cornerRadius = 10.0
+        ateButton?.setTitleColor(.white, for: .normal)
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
 
 }
