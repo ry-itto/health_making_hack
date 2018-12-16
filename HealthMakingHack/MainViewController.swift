@@ -29,7 +29,4 @@ class MainViewController: UIViewController {
         ateButton?.layer.cornerRadius = 10.0
         ateButton?.setTitleColor(.white, for: .normal)
     }
-    
-    
-
 }
