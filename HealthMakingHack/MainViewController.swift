@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MainViewController: UIViewController {
     
     @IBOutlet var progressView: UIProgressView?
     @IBOutlet var progressLabel: UILabel?
     @IBOutlet var ateButton: UIButton?
+    let realm: Realm = try! Realm()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,5 +30,21 @@ class MainViewController: UIViewController {
         ateButton?.layer.borderColor = UIColor.black.cgColor
         ateButton?.layer.cornerRadius = 10.0
         ateButton?.setTitleColor(.white, for: .normal)
+    }
+    
+    @IBAction func ateButtonTapped(_ sender: UIButton) {
+        let record: EatRecord = EatRecord()
+        record.ateDate = Date()
+        try! realm.write {
+            realm.add(record)
+        }
+        showEatRecords()
+    }
+    
+    func showEatRecords() {
+        let results = realm.objects(EatRecord.self)
+        for item in results {
+            print("date:\(item.ateDate)")
+        }
     }
 }
