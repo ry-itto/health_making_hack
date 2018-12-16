@@ -11,4 +11,5 @@ import RealmSwift
 
 class EatRecord: Object {
     @objc dynamic var ateDate = Date()
+    @objc dynamic var ateDateString = ""
 }

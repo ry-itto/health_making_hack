@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     @IBOutlet var progressView: UIProgressView?
     @IBOutlet var progressLabel: UILabel?
     @IBOutlet var ateButton: UIButton?
-    let realm: Realm = try! Realm()
+    let realm: Realm = try! Realm(configuration: Realm.Configuration(schemaVersion: 1))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,21 +30,43 @@ class MainViewController: UIViewController {
         ateButton?.layer.borderColor = UIColor.black.cgColor
         ateButton?.layer.cornerRadius = 10.0
         ateButton?.setTitleColor(.white, for: .normal)
+        
+        deleteAll()
     }
     
     @IBAction func ateButtonTapped(_ sender: UIButton) {
         let record: EatRecord = EatRecord()
-        record.ateDate = Date()
+        record.ateDateString = todayToString()
+        
         try! realm.write {
             realm.add(record)
         }
         showEatRecords()
+        print(countEatRecordsFromDay(dayString: todayToString()))
+    }
+    
+    func countEatRecordsFromDay(dayString: String) -> Int {
+        let results = realm.objects(EatRecord.self).filter("ateDateString == %@", dayString)
+        return results.count
     }
     
     func showEatRecords() {
         let results = realm.objects(EatRecord.self)
         for item in results {
-            print("date:\(item.ateDate)")
+            print("date:\(item.ateDate), string: \(item.ateDateString)")
         }
+    }
+    
+    func deleteAll() {
+        try! realm.write {
+            realm.deleteAll()
+        }
+    }
+    
+    func todayToString() -> String {
+        let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "yyyy/MM/dd"
+        dateFormater.locale = Locale(identifier: "ja_JP")
+        return dateFormater.string(from: Date())
     }
 }
