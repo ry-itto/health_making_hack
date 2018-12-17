@@ -6,5 +6,5 @@ target 'HealthMakingHack' do
   use_frameworks!
 
   # Pods for HealthMakingHack
-  pod 'Realm'
+  pod 'RealmSwift'
 end

@@ -7,8 +7,9 @@
 結構時間かかるので先にやっておいた方が良い。
 
 ## 使用ライブラリ
-- MMDSceneKit : 3Dモデル出力
+- ReamSwift : DB
 
 ## 備考
-.gitinoreはgiboで自動生成しました。
+- .gitinoreはgiboで自動生成しました。
+- プロジェクトを開くときは*.xcworkspaceを開きます。
 

@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF47727121C643F700287865 /* EatRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF47727021C643F700287865 /* EatRecord.swift */; };
 		BF62C75821C5344F00C6A2D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62C75721C5344F00C6A2D4 /* AppDelegate.swift */; };
 		BF62C75F21C5345400C6A2D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF62C75E21C5345400C6A2D4 /* Assets.xcassets */; };
 		BF62C77321C5601800C6A2D4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62C77121C5601800C6A2D4 /* MainViewController.swift */; };
 		BF62C77421C5601800C6A2D4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF62C77221C5601800C6A2D4 /* MainViewController.xib */; };
+		CC5A4E5252511C96BCA489D4 /* Pods_HealthMakingHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38531A83B31CFE3FBF1CC67C /* Pods_HealthMakingHack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		129DDC29ECE3D54688EC61E2 /* Pods-HealthMakingHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthMakingHack.debug.xcconfig"; path = "Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack.debug.xcconfig"; sourceTree = "<group>"; };
+		38531A83B31CFE3FBF1CC67C /* Pods_HealthMakingHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthMakingHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF47727021C643F700287865 /* EatRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatRecord.swift; sourceTree = "<group>"; };
 		BF62C75421C5344F00C6A2D4 /* HealthMakingHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthMakingHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF62C75721C5344F00C6A2D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF62C75E21C5345400C6A2D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF62C76321C5345400C6A2D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF62C77121C5601800C6A2D4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BF62C77221C5601800C6A2D4 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		C8A1E56664B514A8A516A59B /* Pods-HealthMakingHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthMakingHack.release.xcconfig"; path = "Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC5A4E5252511C96BCA489D4 /* Pods_HealthMakingHack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47CCADBDEDF4F53E05E126B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				129DDC29ECE3D54688EC61E2 /* Pods-HealthMakingHack.debug.xcconfig */,
+				C8A1E56664B514A8A516A59B /* Pods-HealthMakingHack.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BF62C74B21C5344F00C6A2D4 = {
 			isa = PBXGroup;
 			children = (
 				BF62C75621C5344F00C6A2D4 /* HealthMakingHack */,
 				BF62C75521C5344F00C6A2D4 /* Products */,
+				47CCADBDEDF4F53E05E126B0 /* Pods */,
+				ED898C6FEC47C6D86A945C48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,8 +75,17 @@
 				BF62C76321C5345400C6A2D4 /* Info.plist */,
 				BF62C77121C5601800C6A2D4 /* MainViewController.swift */,
 				BF62C77221C5601800C6A2D4 /* MainViewController.xib */,
+				BF47727021C643F700287865 /* EatRecord.swift */,
 			);
 			path = HealthMakingHack;
+			sourceTree = "<group>";
+		};
+		ED898C6FEC47C6D86A945C48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38531A83B31CFE3FBF1CC67C /* Pods_HealthMakingHack.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF62C76621C5345400C6A2D4 /* Build configuration list for PBXNativeTarget "HealthMakingHack" */;
 			buildPhases = (
+				E57158CF5B011F1FCF4535F9 /* [CP] Check Pods Manifest.lock */,
 				BF62C75021C5344F00C6A2D4 /* Sources */,
 				BF62C75121C5344F00C6A2D4 /* Frameworks */,
 				BF62C75221C5344F00C6A2D4 /* Resources */,
+				4A244ACF7DEDD4BE8E87B33E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,11 +155,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4A244ACF7DEDD4BE8E87B33E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E57158CF5B011F1FCF4535F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthMakingHack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF62C75021C5344F00C6A2D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF47727121C643F700287865 /* EatRecord.swift in Sources */,
 				BF62C75821C5344F00C6A2D4 /* AppDelegate.swift in Sources */,
 				BF62C77321C5601800C6A2D4 /* MainViewController.swift in Sources */,
 			);
@@ -257,6 +336,7 @@
 		};
 		BF62C76721C5345400C6A2D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 129DDC29ECE3D54688EC61E2 /* Pods-HealthMakingHack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -275,6 +355,7 @@
 		};
 		BF62C76821C5345400C6A2D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8A1E56664B514A8A516A59B /* Pods-HealthMakingHack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
