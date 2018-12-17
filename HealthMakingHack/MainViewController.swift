@@ -25,6 +25,7 @@ class MainViewController: UIViewController {
         initLayout()
         
         // DBの内容を初期化
+        //MARK: テストのため，使用している。本番では使わない。
         deleteAll()
         
         // GIFアニメーション表示
