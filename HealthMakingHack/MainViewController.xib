@@ -41,7 +41,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW2-35-9fi">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW2-35-9fi" customClass="CustomButton" customModule="HealthMakingHack" customModuleProvider="target">
                     <rect key="frame" x="160" y="774" width="94" height="60"/>
                     <color key="backgroundColor" red="0.43958038789999998" green="0.57083912589999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>

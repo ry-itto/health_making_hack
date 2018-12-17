@@ -21,17 +21,18 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         // レイアウトの初期設定
-        progressView?.trackTintColor = UIColor.red
-        progressView?.progressTintColor = .blue
+        progressView?.trackTintColor = UIColor(hex: "a6e3e9")
+        progressView?.progressTintColor = UIColor(hex: "71c9ce")
         progressView?.setProgress(0, animated: false)
         
         progressLabel?.text = "0 / 3"
         
-        ateButton?.backgroundColor = .blue
+        ateButton?.backgroundColor = UIColor(hex: "cbf1f5")
         ateButton?.layer.borderWidth = 1.0
-        ateButton?.layer.borderColor = UIColor.black.cgColor
+        ateButton?.layer.borderColor = UIColor(hex: "a6e3e9").cgColor
         ateButton?.layer.cornerRadius = 10.0
-        ateButton?.setTitleColor(.white, for: .normal)
+        ateButton?.setTitleColor(.black, for: .normal)
+        ateButton?.title
         
         deleteAll()
     }

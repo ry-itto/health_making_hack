@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF3A71AF21C7619A007F1B22 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A71AE21C7619A007F1B22 /* CustomButton.swift */; };
 		BF47727121C643F700287865 /* EatRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF47727021C643F700287865 /* EatRecord.swift */; };
 		BF62C75821C5344F00C6A2D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62C75721C5344F00C6A2D4 /* AppDelegate.swift */; };
 		BF62C75F21C5345400C6A2D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF62C75E21C5345400C6A2D4 /* Assets.xcassets */; };
 		BF62C77321C5601800C6A2D4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62C77121C5601800C6A2D4 /* MainViewController.swift */; };
 		BF62C77421C5601800C6A2D4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF62C77221C5601800C6A2D4 /* MainViewController.xib */; };
+		BFBD69E221C75EFB000650F3 /* UIColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD69E121C75EFB000650F3 /* UIColorHex.swift */; };
 		CC5A4E5252511C96BCA489D4 /* Pods_HealthMakingHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38531A83B31CFE3FBF1CC67C /* Pods_HealthMakingHack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		129DDC29ECE3D54688EC61E2 /* Pods-HealthMakingHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthMakingHack.debug.xcconfig"; path = "Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack.debug.xcconfig"; sourceTree = "<group>"; };
 		38531A83B31CFE3FBF1CC67C /* Pods_HealthMakingHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthMakingHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF3A71AE21C7619A007F1B22 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		BF47727021C643F700287865 /* EatRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatRecord.swift; sourceTree = "<group>"; };
 		BF62C75421C5344F00C6A2D4 /* HealthMakingHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthMakingHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF62C75721C5344F00C6A2D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -25,6 +28,7 @@
 		BF62C76321C5345400C6A2D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF62C77121C5601800C6A2D4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BF62C77221C5601800C6A2D4 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		BFBD69E121C75EFB000650F3 /* UIColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorHex.swift; sourceTree = "<group>"; };
 		C8A1E56664B514A8A516A59B /* Pods-HealthMakingHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthMakingHack.release.xcconfig"; path = "Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +80,8 @@
 				BF62C77121C5601800C6A2D4 /* MainViewController.swift */,
 				BF62C77221C5601800C6A2D4 /* MainViewController.xib */,
 				BF47727021C643F700287865 /* EatRecord.swift */,
+				BFBD69E121C75EFB000650F3 /* UIColorHex.swift */,
+				BF3A71AE21C7619A007F1B22 /* CustomButton.swift */,
 			);
 			path = HealthMakingHack;
 			sourceTree = "<group>";
@@ -210,8 +216,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF47727121C643F700287865 /* EatRecord.swift in Sources */,
+				BFBD69E221C75EFB000650F3 /* UIColorHex.swift in Sources */,
 				BF62C75821C5344F00C6A2D4 /* AppDelegate.swift in Sources */,
 				BF62C77321C5601800C6A2D4 /* MainViewController.swift in Sources */,
+				BF3A71AF21C7619A007F1B22 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
