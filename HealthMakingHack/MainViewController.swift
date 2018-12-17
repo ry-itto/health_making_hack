@@ -14,18 +14,18 @@ class MainViewController: UIViewController {
     @IBOutlet var progressView: UIProgressView?
     @IBOutlet var progressLabel: UILabel?
     @IBOutlet var ateButton: UIButton?
-    let realm: Realm = try! Realm()
-//    let realm: Realm = try! Realm(configuration: Realm.Configuration(schemaVersion: 1))
+//    let realm: Realm = try! Realm()
+    let realm: Realm = try! Realm(configuration: Realm.Configuration(schemaVersion: 1))
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // レイアウトの設定
+        // レイアウトの初期設定
         progressView?.trackTintColor = UIColor.red
         progressView?.progressTintColor = .blue
-        progressView?.setProgress(0.3, animated: false)
+        progressView?.setProgress(0, animated: false)
         
-        progressLabel?.text = "1 / 3"
+        progressLabel?.text = "0 / 3"
         
         ateButton?.backgroundColor = .blue
         ateButton?.layer.borderWidth = 1.0
@@ -44,8 +44,12 @@ class MainViewController: UIViewController {
         try! realm.write {
             realm.add(record)
         }
-        showEatRecords()
-        print(countEatRecordsFromDay(dayString: todayToString()))
+        
+        // progressViewの進行度を変更
+        let eatRecordCountToday = countEatRecordsFromDay(dayString: todayToString())
+        progressLabel?.text = "\(eatRecordCountToday) / 3"
+        progressView?.setProgress(Float(0.334 * Double(eatRecordCountToday)), animated: true)
+        
     }
     
     /**
