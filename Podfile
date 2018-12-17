@@ -7,4 +7,5 @@ target 'HealthMakingHack' do
 
   # Pods for HealthMakingHack
   pod 'RealmSwift'
+  pod 'SwiftyGif'
 end

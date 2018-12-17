@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import SwiftyGif
 
 class MainViewController: UIViewController {
     
@@ -21,20 +22,14 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         // レイアウトの初期設定
-        progressView?.trackTintColor = UIColor(hex: "a6e3e9")
-        progressView?.progressTintColor = UIColor(hex: "71c9ce")
-        progressView?.setProgress(0, animated: false)
+        initLayout()
         
-        progressLabel?.text = "0 / 3"
-        
-        ateButton?.backgroundColor = UIColor(hex: "cbf1f5")
-        ateButton?.layer.borderWidth = 1.0
-        ateButton?.layer.borderColor = UIColor(hex: "a6e3e9").cgColor
-        ateButton?.layer.cornerRadius = 10.0
-        ateButton?.setTitleColor(.black, for: .normal)
-        ateButton?.title
-        
+        // DBの内容を初期化
         deleteAll()
+        
+        // GIFアニメーション表示
+        showGifAnimation(gifName: "hiyori_chan/a_idling(hiyori_m01)/idling.gif")
+        
     }
     
     // 「食べた！」ボタンがタップされたときの動作
@@ -51,6 +46,22 @@ class MainViewController: UIViewController {
         progressLabel?.text = "\(eatRecordCountToday) / 3"
         progressView?.setProgress(Float(0.334 * Double(eatRecordCountToday)), animated: true)
         
+    }
+    
+    // 画面レイアウトの初期化
+    func initLayout() {
+        progressView?.trackTintColor = UIColor(hex: "a6e3e9")
+        progressView?.progressTintColor = UIColor(hex: "71c9ce")
+        progressView?.setProgress(0, animated: false)
+        
+        progressLabel?.text = "0 / 3"
+        
+        ateButton?.backgroundColor = UIColor(hex: "cbf1f5")
+        ateButton?.layer.borderWidth = 1.0
+        ateButton?.layer.borderColor = UIColor(hex: "a6e3e9").cgColor
+        ateButton?.layer.cornerRadius = 10.0
+        ateButton?.setTitleColor(.black, for: .normal)
+
     }
     
     /**
@@ -83,5 +94,17 @@ class MainViewController: UIViewController {
         dateFormater.dateFormat = "yyyy/MM/dd"
         dateFormater.locale = Locale(identifier: "ja_JP")
         return dateFormater.string(from: Date())
+    }
+    
+    /** GIFアニメーションを表示
+     * デフォルトでは無限ループで出力するようにしています。
+     * @param gifName gifファイルへのパス
+     */
+    func showGifAnimation(gifName: String) {
+        let gif = UIImage(gifName: gifName)
+        let imageview = UIImageView(gifImage: gif, loopCount: -1) // Use -1 for infinite loop
+        imageview.frame = CGRect(x: 200, y: 300, width: 300, height: 500)
+        imageview.center = view.center
+        view.addSubview(imageview)
     }
 }

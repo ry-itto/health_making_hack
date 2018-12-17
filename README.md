@@ -8,6 +8,7 @@
 
 ## 使用ライブラリ
 - ReamSwift : DB
+- SwiftyGif
 
 ## 備考
 - .gitinoreはgiboで自動生成しました。
