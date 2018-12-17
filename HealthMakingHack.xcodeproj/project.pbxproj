@@ -12,6 +12,8 @@
 		BF62C75F21C5345400C6A2D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF62C75E21C5345400C6A2D4 /* Assets.xcassets */; };
 		BF62C77321C5601800C6A2D4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62C77121C5601800C6A2D4 /* MainViewController.swift */; };
 		BF62C77421C5601800C6A2D4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF62C77221C5601800C6A2D4 /* MainViewController.xib */; };
+		BFB4485C21C73E5200A6F9B6 /* abokado_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = BFB4485B21C73E5200A6F9B6 /* abokado_gif.gif */; };
+		BFBD69E021C75C0C000650F3 /* hiyori_chan in Resources */ = {isa = PBXBuildFile; fileRef = BFBD69DF21C75C0C000650F3 /* hiyori_chan */; };
 		CC5A4E5252511C96BCA489D4 /* Pods_HealthMakingHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38531A83B31CFE3FBF1CC67C /* Pods_HealthMakingHack.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		BF62C76321C5345400C6A2D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF62C77121C5601800C6A2D4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BF62C77221C5601800C6A2D4 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		BFB4485B21C73E5200A6F9B6 /* abokado_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = abokado_gif.gif; path = ../../../Documents/abokado_gif.gif; sourceTree = "<group>"; };
+		BFBD69DF21C75C0C000650F3 /* hiyori_chan */ = {isa = PBXFileReference; lastKnownFileType = folder; name = hiyori_chan; path = ../../../Downloads/hiyori_chan; sourceTree = "<group>"; };
 		C8A1E56664B514A8A516A59B /* Pods-HealthMakingHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthMakingHack.release.xcconfig"; path = "Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +74,7 @@
 		BF62C75621C5344F00C6A2D4 /* HealthMakingHack */ = {
 			isa = PBXGroup;
 			children = (
+				BFB4485A21C73DE400A6F9B6 /* gif */,
 				BF62C75721C5344F00C6A2D4 /* AppDelegate.swift */,
 				BF62C75E21C5345400C6A2D4 /* Assets.xcassets */,
 				BF62C76321C5345400C6A2D4 /* Info.plist */,
@@ -78,6 +83,15 @@
 				BF47727021C643F700287865 /* EatRecord.swift */,
 			);
 			path = HealthMakingHack;
+			sourceTree = "<group>";
+		};
+		BFB4485A21C73DE400A6F9B6 /* gif */ = {
+			isa = PBXGroup;
+			children = (
+				BFBD69DF21C75C0C000650F3 /* hiyori_chan */,
+				BFB4485B21C73E5200A6F9B6 /* abokado_gif.gif */,
+			);
+			name = gif;
 			sourceTree = "<group>";
 		};
 		ED898C6FEC47C6D86A945C48 /* Frameworks */ = {
@@ -148,7 +162,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFBD69E021C75C0C000650F3 /* hiyori_chan in Resources */,
 				BF62C75F21C5345400C6A2D4 /* Assets.xcassets in Resources */,
+				BFB4485C21C73E5200A6F9B6 /* abokado_gif.gif in Resources */,
 				BF62C77421C5601800C6A2D4 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +183,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -174,6 +191,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
