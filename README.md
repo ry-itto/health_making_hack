@@ -12,4 +12,5 @@
 ## 備考
 - .gitinoreはgiboで自動生成しました。
 - プロジェクトを開くときは*.xcworkspaceを開きます。
+- `pod install`を作業前に実行しましょう。
 
