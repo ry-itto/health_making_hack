@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import SwiftyGif
 
 class MainViewController: UIViewController {
     
@@ -21,19 +22,10 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         // レイアウトの初期設定
-        progressView?.trackTintColor = UIColor.red
-        progressView?.progressTintColor = .blue
-        progressView?.setProgress(0, animated: false)
-        
-        progressLabel?.text = "0 / 3"
-        
-        ateButton?.backgroundColor = .blue
-        ateButton?.layer.borderWidth = 1.0
-        ateButton?.layer.borderColor = UIColor.black.cgColor
-        ateButton?.layer.cornerRadius = 10.0
-        ateButton?.setTitleColor(.white, for: .normal)
-        
+        initLayout()
         deleteAll()
+        showGifAnimation(gifName: "abokado_gif.gif")
+        
     }
     
     // 「食べた！」ボタンがタップされたときの動作
@@ -82,5 +74,27 @@ class MainViewController: UIViewController {
         dateFormater.dateFormat = "yyyy/MM/dd"
         dateFormater.locale = Locale(identifier: "ja_JP")
         return dateFormater.string(from: Date())
+    }
+    
+    func initLayout() {
+        progressView?.trackTintColor = UIColor.red
+        progressView?.progressTintColor = .blue
+        progressView?.setProgress(0, animated: false)
+        
+        progressLabel?.text = "0 / 3"
+        
+        ateButton?.backgroundColor = .blue
+        ateButton?.layer.borderWidth = 1.0
+        ateButton?.layer.borderColor = UIColor.black.cgColor
+        ateButton?.layer.cornerRadius = 10.0
+        ateButton?.setTitleColor(.white, for: .normal)
+    }
+    
+    func showGifAnimation(gifName: String) {
+        let gif = UIImage(gifName: gifName)
+        let imageview = UIImageView(gifImage: gif, loopCount: -1) // Use -1 for infinite loop
+        imageview.frame = CGRect(x: 100, y: 100, width: 300, height: 300)
+        imageview.center = view.center
+        view.addSubview(imageview)
     }
 }
