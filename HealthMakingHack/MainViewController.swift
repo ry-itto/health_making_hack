@@ -31,14 +31,8 @@ class MainViewController: UIViewController {
         // GIFアニメーション表示
         showGifAnimation(gifName: "hiyori_chan/a_idling(hiyori_m01)/idling.gif")
         
-        let imageView = UIImageView(image: UIImage(named: "balloon_white_clear_orange.png"))
-        imageView.frame = CGRect(x: (view.bounds.size.width - 280) / 2, y: 400, width: 330, height: 150)
-        view.addSubview(imageView)
-        
-        let commentLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
-        commentLabel.text = "おはよー"
-        commentLabel.textAlignment = .center
-        imageView.addSubview(commentLabel)
+        // セリフ表示用吹き出し表示
+        showBalloon(selif: "おはよー")
         
     }
     
@@ -115,5 +109,22 @@ class MainViewController: UIViewController {
         imageview.center = view.center
         view.addSubview(imageview)
         view.bringSubviewToFront(ateButton!)
+    }
+    
+    /** 吹き出しを表示
+     * @param selif 話させるセリフ
+     * @return セリフ自体を表示しているUILabel
+     */
+    func showBalloon(serif: String) -> UILabel {
+        let imageView = UIImageView(image: UIImage(named: "balloon_white_clear_orange.png"))
+        imageView.frame = CGRect(x: (view.bounds.size.width - 280) / 2, y: 400, width: 330, height: 150)
+        view.addSubview(imageView)
+        
+        let commentLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+        commentLabel.text = serif
+        commentLabel.textAlignment = .center
+        imageView.addSubview(commentLabel)
+        
+        return commentLabel
     }
 }
