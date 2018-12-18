@@ -31,6 +31,15 @@ class MainViewController: UIViewController {
         // GIFアニメーション表示
         showGifAnimation(gifName: "hiyori_chan/a_idling(hiyori_m01)/idling.gif")
         
+        let imageView = UIImageView(image: UIImage(named: "balloon_white_clear_orange.png"))
+        imageView.frame = CGRect(x: (view.bounds.size.width - 280) / 2, y: 400, width: 330, height: 150)
+        view.addSubview(imageView)
+        
+        let commentLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+        commentLabel.text = "おはよー"
+        commentLabel.textAlignment = .center
+        imageView.addSubview(commentLabel)
+        
     }
     
     // 「食べた！」ボタンがタップされたときの動作
@@ -46,23 +55,21 @@ class MainViewController: UIViewController {
         let eatRecordCountToday = countEatRecordsFromDay(dayString: todayToString())
         progressLabel?.text = "\(eatRecordCountToday) / 3"
         progressView?.setProgress(Float(0.334 * Double(eatRecordCountToday)), animated: true)
-        
     }
     
     // 画面レイアウトの初期化
     func initLayout() {
-        progressView?.trackTintColor = UIColor(hex: "a6e3e9")
-        progressView?.progressTintColor = UIColor(hex: "71c9ce")
+        progressView?.trackTintColor = .white
+        progressView?.progressTintColor = UIColor(hex: "FF7043")
         progressView?.setProgress(0, animated: false)
         
         progressLabel?.text = "0 / 3"
         
-        ateButton?.backgroundColor = UIColor(hex: "cbf1f5")
+        ateButton?.backgroundColor = UIColor(hex: "FF7043")
         ateButton?.layer.borderWidth = 1.0
-        ateButton?.layer.borderColor = UIColor(hex: "a6e3e9").cgColor
+        ateButton?.layer.borderColor = UIColor(hex: "FF7043").cgColor
         ateButton?.layer.cornerRadius = 10.0
-        ateButton?.setTitleColor(.black, for: .normal)
-
+        ateButton?.setTitleColor(.white, for: .normal)
     }
     
     /**
@@ -104,8 +111,9 @@ class MainViewController: UIViewController {
     func showGifAnimation(gifName: String) {
         let gif = UIImage(gifName: gifName)
         let imageview = UIImageView(gifImage: gif, loopCount: -1) // Use -1 for infinite loop
-        imageview.frame = CGRect(x: 200, y: 300, width: 300, height: 500)
+        imageview.frame = CGRect(x: 200, y: 300, width: 500, height: 800)
         imageview.center = view.center
         view.addSubview(imageview)
+        view.bringSubviewToFront(ateButton!)
     }
 }
