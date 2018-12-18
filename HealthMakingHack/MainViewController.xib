@@ -23,7 +23,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="食事回数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQo-cO-IDw">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="しょくじ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQo-cO-IDw">
                     <rect key="frame" x="322" y="89" width="72" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
@@ -42,11 +42,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW2-35-9fi" customClass="CustomButton" customModule="HealthMakingHack" customModuleProvider="target">
-                    <rect key="frame" x="160" y="774" width="94" height="60"/>
+                    <rect key="frame" x="107" y="774" width="200" height="60"/>
                     <color key="backgroundColor" red="0.43958038789999998" green="0.57083912589999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="Gj8-Tg-Jcj"/>
                     </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                     <state key="normal" title="食べた！">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -59,13 +60,13 @@
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WJJ-Vf-6cx" secondAttribute="trailing" constant="130" id="6Fh-eK-eXF"/>
                 <constraint firstItem="tQo-cO-IDw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="45" id="888-sf-Ias"/>
-                <constraint firstItem="qW2-35-9fi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="160" id="BtN-o8-Lbn"/>
+                <constraint firstItem="qW2-35-9fi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="107" id="8BK-IE-6ft"/>
                 <constraint firstItem="tQo-cO-IDw" firstAttribute="leading" secondItem="WJJ-Vf-6cx" secondAttribute="trailing" constant="38" id="O80-eT-HaY"/>
                 <constraint firstItem="WJJ-Vf-6cx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Rei-u9-MpJ"/>
                 <constraint firstItem="WJJ-Vf-6cx" firstAttribute="top" secondItem="luc-Rg-h25" secondAttribute="bottom" constant="8" id="XCf-B7-SZS"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qW2-35-9fi" secondAttribute="trailing" constant="160" id="Y7U-rD-jT4"/>
                 <constraint firstItem="luc-Rg-h25" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="YWe-DB-ond"/>
                 <constraint firstItem="luc-Rg-h25" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="136" id="d0n-Lc-NqR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qW2-35-9fi" secondAttribute="trailing" constant="107" id="fCA-Ig-z88"/>
                 <constraint firstItem="WJJ-Vf-6cx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="54" id="juz-OY-6mf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qW2-35-9fi" secondAttribute="bottom" constant="28" id="rFI-jM-vUI"/>
             </constraints>

@@ -18,6 +18,7 @@
 		BFBD69E221C75EFB000650F3 /* UIColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD69E121C75EFB000650F3 /* UIColorHex.swift */; };
 		BFE07CAE21C8D6B200FC9B52 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE07CAC21C8D69600FC9B52 /* HealthKit.framework */; };
 		BFE07CAF21C8DA2800FC9B52 /* HealthKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE07CA721C8D61100FC9B52 /* HealthKitUI.framework */; };
+		BFE07CA621C8CBA800FC9B52 /* balloon_white_clear_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE07CA521C8CBA800FC9B52 /* balloon_white_clear_orange.png */; };
 		CC5A4E5252511C96BCA489D4 /* Pods_HealthMakingHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38531A83B31CFE3FBF1CC67C /* Pods_HealthMakingHack.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		BFE07CA721C8D61100FC9B52 /* HealthKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKitUI.framework; path = System/Library/Frameworks/HealthKitUI.framework; sourceTree = SDKROOT; };
 		BFE07CAB21C8D66800FC9B52 /* HealthMakingHack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthMakingHack.entitlements; sourceTree = "<group>"; };
 		BFE07CAC21C8D69600FC9B52 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		BFE07CA521C8CBA800FC9B52 /* balloon_white_clear_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = balloon_white_clear_orange.png; path = ../../../Desktop/balloon_white_clear_orange.png; sourceTree = "<group>"; };
 		C8A1E56664B514A8A516A59B /* Pods-HealthMakingHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthMakingHack.release.xcconfig"; path = "Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +66,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BF5D51C721C77166007F71A0 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				BF47727021C643F700287865 /* EatRecord.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		BF5D51C821C771DF007F71A0 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BFBD69E121C75EFB000650F3 /* UIColorHex.swift */,
+				BF3A71AE21C7619A007F1B22 /* CustomButton.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		BF62C74B21C5344F00C6A2D4 = {
 			isa = PBXGroup;
 			children = (
@@ -86,15 +105,15 @@
 			isa = PBXGroup;
 			children = (
 				BFE07CAB21C8D66800FC9B52 /* HealthMakingHack.entitlements */,
+				BFE07CA521C8CBA800FC9B52 /* balloon_white_clear_orange.png */,
+				BF5D51C821C771DF007F71A0 /* Util */,
+				BF5D51C721C77166007F71A0 /* DB */,
 				BFB4485A21C73DE400A6F9B6 /* gif */,
 				BF62C75721C5344F00C6A2D4 /* AppDelegate.swift */,
 				BF62C75E21C5345400C6A2D4 /* Assets.xcassets */,
 				BF62C76321C5345400C6A2D4 /* Info.plist */,
 				BF62C77121C5601800C6A2D4 /* MainViewController.swift */,
 				BF62C77221C5601800C6A2D4 /* MainViewController.xib */,
-				BF47727021C643F700287865 /* EatRecord.swift */,
-				BFBD69E121C75EFB000650F3 /* UIColorHex.swift */,
-				BF3A71AE21C7619A007F1B22 /* CustomButton.swift */,
 			);
 			path = HealthMakingHack;
 			sourceTree = "<group>";
@@ -184,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFBD69E021C75C0C000650F3 /* hiyori_chan in Resources */,
+				BFE07CA621C8CBA800FC9B52 /* balloon_white_clear_orange.png in Resources */,
 				BF62C75F21C5345400C6A2D4 /* Assets.xcassets in Resources */,
 				BFB4485C21C73E5200A6F9B6 /* abokado_gif.gif in Resources */,
 				BF62C77421C5601800C6A2D4 /* MainViewController.xib in Resources */,
