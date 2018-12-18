@@ -32,7 +32,7 @@ class MainViewController: UIViewController {
         showGifAnimation(gifName: "hiyori_chan/a_idling(hiyori_m01)/idling.gif")
         
         // セリフ表示用吹き出し表示
-        showBalloon(selif: "おはよー")
+        showBalloon(serif: "おはよー")
         
     }
     
