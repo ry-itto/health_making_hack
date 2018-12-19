@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import SwiftyGif
+import HealthKit
 
 class MainViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class MainViewController: UIViewController {
     @IBOutlet var ateButton: UIButton?
 //    let realm: Realm = try! Realm()
     let realm: Realm = try! Realm(configuration: Realm.Configuration(schemaVersion: 1))
+    let healthStore = HKHealthStore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,12 @@ class MainViewController: UIViewController {
         // GIFアニメーション表示
         showGifAnimation(gifName: "hiyori_chan/a_idling(hiyori_m01)/idling.gif")
         
+        // ヘルスケア系処理
+        // 読みたいデータを指定
+        let readType = Set([
+            // 運動情報
+            HKWorkoutType.workoutType()
+        ])
     }
     
     // 「食べた！」ボタンがタップされたときの動作

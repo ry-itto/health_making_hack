@@ -16,6 +16,7 @@
 		BFBD69E021C75C0C000650F3 /* hiyori_chan in Resources */ = {isa = PBXBuildFile; fileRef = BFBD69DF21C75C0C000650F3 /* hiyori_chan */; };
 		BFE07CB121C8E3DD00FC9B52 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE07CB021C8E3DD00FC9B52 /* HealthKit.framework */; };
 		BFE07CB421C8E49400FC9B52 /* HealthKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE07CB321C8E49400FC9B52 /* HealthKitUI.framework */; };
+		BFE07CB621C8F3A500FC9B52 /* HealthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE07CB521C8F3A500FC9B52 /* HealthKit.swift */; };
 		CC5A4E5252511C96BCA489D4 /* Pods_HealthMakingHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38531A83B31CFE3FBF1CC67C /* Pods_HealthMakingHack.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		BFE07CB021C8E3DD00FC9B52 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		BFE07CB221C8E3DD00FC9B52 /* HealthMakingHack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthMakingHack.entitlements; sourceTree = "<group>"; };
 		BFE07CB321C8E49400FC9B52 /* HealthKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKitUI.framework; path = System/Library/Frameworks/HealthKitUI.framework; sourceTree = SDKROOT; };
+		BFE07CB521C8F3A500FC9B52 /* HealthKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKit.swift; sourceTree = "<group>"; };
 		C8A1E56664B514A8A516A59B /* Pods-HealthMakingHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthMakingHack.release.xcconfig"; path = "Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 				BF62C77121C5601800C6A2D4 /* MainViewController.swift */,
 				BF62C77221C5601800C6A2D4 /* MainViewController.xib */,
 				BF47727021C643F700287865 /* EatRecord.swift */,
+				BFE07CB521C8F3A500FC9B52 /* HealthKit.swift */,
 			);
 			path = HealthMakingHack;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE07CB621C8F3A500FC9B52 /* HealthKit.swift in Sources */,
 				BF47727121C643F700287865 /* EatRecord.swift in Sources */,
 				BF62C75821C5344F00C6A2D4 /* AppDelegate.swift in Sources */,
 				BF62C77321C5601800C6A2D4 /* MainViewController.swift in Sources */,
