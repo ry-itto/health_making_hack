@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0452B868F1869E2BCD7AA7EF /* Pods_HealthMakingHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868CA3B2876C4FA63CEABC12 /* Pods_HealthMakingHack.framework */; };
 		BF3A71AF21C7619A007F1B22 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A71AE21C7619A007F1B22 /* CustomButton.swift */; };
 		BF47727121C643F700287865 /* EatRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF47727021C643F700287865 /* EatRecord.swift */; };
 		BF62C75821C5344F00C6A2D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62C75721C5344F00C6A2D4 /* AppDelegate.swift */; };
@@ -18,13 +19,12 @@
 		BFBD69E221C75EFB000650F3 /* UIColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD69E121C75EFB000650F3 /* UIColorHex.swift */; };
 		BFE07CAE21C8D6B200FC9B52 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE07CAC21C8D69600FC9B52 /* HealthKit.framework */; };
 		BFE07CAF21C8DA2800FC9B52 /* HealthKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE07CA721C8D61100FC9B52 /* HealthKitUI.framework */; };
-		CC5A4E5252511C96BCA489D4 /* Pods_HealthMakingHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38531A83B31CFE3FBF1CC67C /* Pods_HealthMakingHack.framework */; };
 		CEB74D3D21C9F3F60046898F /* Pomeranian-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEB74D3C21C9F3F50046898F /* Pomeranian-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		129DDC29ECE3D54688EC61E2 /* Pods-HealthMakingHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthMakingHack.debug.xcconfig"; path = "Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack.debug.xcconfig"; sourceTree = "<group>"; };
-		38531A83B31CFE3FBF1CC67C /* Pods_HealthMakingHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthMakingHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28FB990CEC9AF2606B8C81FF /* Pods-HealthMakingHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthMakingHack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack.debug.xcconfig"; sourceTree = "<group>"; };
+		868CA3B2876C4FA63CEABC12 /* Pods_HealthMakingHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthMakingHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3A71AE21C7619A007F1B22 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		BF47727021C643F700287865 /* EatRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatRecord.swift; sourceTree = "<group>"; };
 		BF62C75421C5344F00C6A2D4 /* HealthMakingHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthMakingHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,7 +39,6 @@
 		BFE07CA721C8D61100FC9B52 /* HealthKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKitUI.framework; path = System/Library/Frameworks/HealthKitUI.framework; sourceTree = SDKROOT; };
 		BFE07CAB21C8D66800FC9B52 /* HealthMakingHack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthMakingHack.entitlements; sourceTree = "<group>"; };
 		BFE07CAC21C8D69600FC9B52 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		C8A1E56664B514A8A516A59B /* Pods-HealthMakingHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthMakingHack.release.xcconfig"; path = "Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack.release.xcconfig"; sourceTree = "<group>"; };
 		CEB74D3C21C9F3F50046898F /* Pomeranian-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pomeranian-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,21 +48,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFE07CAF21C8DA2800FC9B52 /* HealthKitUI.framework in Frameworks */,
-				CC5A4E5252511C96BCA489D4 /* Pods_HealthMakingHack.framework in Frameworks */,
 				BFE07CAE21C8D6B200FC9B52 /* HealthKit.framework in Frameworks */,
+				0452B868F1869E2BCD7AA7EF /* Pods_HealthMakingHack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		47CCADBDEDF4F53E05E126B0 /* Pods */ = {
+		1E310BC6E67BBC6F44D1C2DE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				129DDC29ECE3D54688EC61E2 /* Pods-HealthMakingHack.debug.xcconfig */,
-				C8A1E56664B514A8A516A59B /* Pods-HealthMakingHack.release.xcconfig */,
+				28FB990CEC9AF2606B8C81FF /* Pods-HealthMakingHack.debug.xcconfig */,
 			);
-			path = Pods;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		BF5D51C721C77166007F71A0 /* DB */ = {
@@ -88,8 +86,8 @@
 			children = (
 				BF62C75621C5344F00C6A2D4 /* HealthMakingHack */,
 				BF62C75521C5344F00C6A2D4 /* Products */,
-				47CCADBDEDF4F53E05E126B0 /* Pods */,
 				ED898C6FEC47C6D86A945C48 /* Frameworks */,
+				1E310BC6E67BBC6F44D1C2DE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,7 +130,7 @@
 			children = (
 				BFE07CAC21C8D69600FC9B52 /* HealthKit.framework */,
 				BFE07CA721C8D61100FC9B52 /* HealthKitUI.framework */,
-				38531A83B31CFE3FBF1CC67C /* Pods_HealthMakingHack.framework */,
+				868CA3B2876C4FA63CEABC12 /* Pods_HealthMakingHack.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -144,11 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF62C76621C5345400C6A2D4 /* Build configuration list for PBXNativeTarget "HealthMakingHack" */;
 			buildPhases = (
-				E57158CF5B011F1FCF4535F9 /* [CP] Check Pods Manifest.lock */,
+				1A5F1160C77B76E5A5862595 /* [CP] Check Pods Manifest.lock */,
 				BF62C75021C5344F00C6A2D4 /* Sources */,
 				BF62C75121C5344F00C6A2D4 /* Frameworks */,
 				BF62C75221C5344F00C6A2D4 /* Resources */,
-				4A244ACF7DEDD4BE8E87B33E /* [CP] Embed Pods Frameworks */,
+				454E8292243D66781A7AE36F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,7 +211,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4A244ACF7DEDD4BE8E87B33E /* [CP] Embed Pods Frameworks */ = {
+		1A5F1160C77B76E5A5862595 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthMakingHack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		454E8292243D66781A7AE36F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -237,28 +257,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E57158CF5B011F1FCF4535F9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HealthMakingHack-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -340,69 +338,15 @@
 			};
 			name = Debug;
 		};
-		BF62C76521C5345400C6A2D4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		BF62C76721C5345400C6A2D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28FB990CEC9AF2606B8C81FF /* Pods-HealthMakingHack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HealthMakingHack/HealthMakingHack.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DFY27HWN2G;
+				DEVELOPMENT_TEAM = SWTMD9F8VT;
 				INFOPLIST_FILE = HealthMakingHack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -416,103 +360,6 @@
 			};
 			name = Debug;
 		};
-		BF62C76821C5345400C6A2D4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = HealthMakingHack/HealthMakingHack.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DFY27HWN2G;
-				INFOPLIST_FILE = HealthMakingHack/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = HealthMakingHack;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		CE4171E821C9001F00F61536 /* HealthMakingHack */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = HealthMakingHack;
-		};
-		CE4171E921C9001F00F61536 /* HealthMakingHack */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = HealthMakingHack/HealthMakingHack.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DFY27HWN2G;
-				INFOPLIST_FILE = HealthMakingHack/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = HealthMakingHack;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = HealthMakingHack;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -520,21 +367,17 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF62C76421C5345400C6A2D4 /* Debug */,
-				BF62C76521C5345400C6A2D4 /* Release */,
-				CE4171E821C9001F00F61536 /* HealthMakingHack */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		BF62C76621C5345400C6A2D4 /* Build configuration list for PBXNativeTarget "HealthMakingHack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF62C76721C5345400C6A2D4 /* Debug */,
-				BF62C76821C5345400C6A2D4 /* Release */,
-				CE4171E921C9001F00F61536 /* HealthMakingHack */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
