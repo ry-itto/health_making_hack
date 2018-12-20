@@ -16,7 +16,7 @@ struct HiyoriMotion {
         (4, "心配する" , "worry", "worried"),
         (5, "笑って驚く", "suprised_with_smile", "smile_to_suprised"),
         (6, "気分がいい", "happy", "feeling_good"),
-        (7, "驚く", "suprised", "suprised"),
+        (7, "驚く", "suprised", "supirsed"),
         (8, "怒る", "angry", "angry"),
         (9, "落ち込む", "upset", "sad"),
         (10, "笑う, 微笑む", "smile", "smiling")

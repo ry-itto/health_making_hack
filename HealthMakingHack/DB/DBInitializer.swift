@@ -9,15 +9,18 @@
 import Foundation
 import RealmSwift
 
+// データベースの初期処理を行うクラス。
 class DBInitializer {
     static func setUp() {
         let realm = try! Realm(configuration: Realm.Configuration(schemaVersion: 3))
         print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
         if realm.objects(Motion.self).isEmpty {
             try! realm.write {
                 realm.add(createMotionModels())
             }
         }
+        
         if realm.objects(Serif.self).isEmpty {
             try! realm.write {
                 realm.add(createSerifModels(realm: realm))
@@ -25,6 +28,7 @@ class DBInitializer {
         }
     }
     
+    // Motionテーブルのデータを作成します。
     static private func createMotionModels() -> Array<Motion> {
         var motionModels: Array<Motion> = []
         for hiyoriMotion in HiyoriMotion.motions {
@@ -38,6 +42,7 @@ class DBInitializer {
         return motionModels
     }
     
+    // Serifテーブルのデータを作成します。
     static private func createSerifModels(realm: Realm) -> Array<Serif> {
         var serifModels: Array<Serif> = []
         var id: Int = 1
