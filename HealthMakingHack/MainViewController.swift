@@ -16,7 +16,8 @@ class MainViewController: UIViewController {
     @IBOutlet var progressLabel: UILabel?
     @IBOutlet var ateButton: UIButton?
 //    let realm: Realm = try! Realm()
-    let realm: Realm = try! Realm(configuration: Realm.Configuration(schemaVersion: 2))
+    let realm: Realm = try! Realm(configuration: Realm.Configuration(schemaVersion: 3))
+    var commentLabel: UILabel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +25,14 @@ class MainViewController: UIViewController {
         // レイアウトの初期設定
         initLayout()
         
-        // DBの内容を初期化. マスタデータまで消えるので注意。
-        // deleteAll()
+        // DBの内容を初期化。EatRecordのみを削除
+         deleteAll()
         
         // GIFアニメーション表示
         showGifAnimation(gifName: "idling")
         
         // セリフ表示用吹き出し表示
-        var commentLabel = showBalloon(serif: "おはよー")
-        
+        commentLabel = showBalloon(serif: "おはよおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお")
     }
     
     // 「食べた！」ボタンがタップされたときの動作
@@ -49,6 +49,7 @@ class MainViewController: UIViewController {
         progressLabel?.text = "\(eatRecordCountToday) / 3"
         progressView?.setProgress(Float(0.334 * Double(eatRecordCountToday)), animated: true)
     }
+
     
     // 画面レイアウトの初期化
     func initLayout() {
@@ -85,7 +86,8 @@ class MainViewController: UIViewController {
     // 全レコードを削除
     func deleteAll() {
         try! realm.write {
-            realm.deleteAll()
+//            realm.deleteAll()
+            realm.delete(realm.objects(EatRecord.self))
         }
     }
     
@@ -102,10 +104,19 @@ class MainViewController: UIViewController {
      * @param gifName gifファイルへのパス
      */
     func showGifAnimation(gifName: String) {
-        let gif = UIImage(gifName: gifName)
-        let imageview = UIImageView(gifImage: gif, loopCount: -1) // Use -1 for infinite loop
+        
+        // GIF画像がタップされたことを検知するものを定義
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self,                                                  action: #selector(hiyoriChanTapped(tapGestureRecognizer:)))
+        
+        // GIF画像を表示するための設定
+        let gifImage = UIImage(gifName: gifName)
+        let imageview = UIImageView(gifImage: gifImage, loopCount: -1) // Use -1 for infinite loop
         imageview.frame = CGRect(x: 200, y: 300, width: 500, height: 800)
         imageview.center = view.center
+        imageview.isUserInteractionEnabled = true
+        imageview.addGestureRecognizer(tapGestureRecognizer)
+        
+        // メインビューに表示
         view.addSubview(imageview)
         view.bringSubviewToFront(ateButton!)
     }
@@ -120,11 +131,27 @@ class MainViewController: UIViewController {
         imageView.center = view.center
         view.addSubview(imageView)
         
-        let commentLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+        let commentLabel = UILabel(frame: CGRect(x: 50, y: 50, width: 200, height: 100))
         commentLabel.text = serif
         commentLabel.textAlignment = .center
+        commentLabel.numberOfLines = 0
+        commentLabel.sizeToFit()
         imageView.addSubview(commentLabel)
         
         return commentLabel
+    }
+    
+    /**
+     * GIF画像がタップされた時の動作
+     * Motionテーブルからtypeが1のデータを全て取得し，その中のランダムな要素を使用する
+     * GIF画像，吹き出し内メッセージを変更する。
+     */
+    @objc func hiyoriChanTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        let serifs: Results<Serif> = realm.objects(Serif.self).filter("type == 1")
+        let serif: Serif? = serifs.randomElement()
+        
+        tappedImage.gifImage = UIImage(gifName: serif?.motion?.motionPath ?? "")
+        commentLabel?.text = serif?.text
     }
 }

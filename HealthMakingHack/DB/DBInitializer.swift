@@ -11,29 +11,18 @@ import RealmSwift
 
 class DBInitializer {
     static func setUp() {
-        let realm = try! Realm(configuration: Realm.Configuration(schemaVersion: 2))
+        let realm = try! Realm(configuration: Realm.Configuration(schemaVersion: 3))
         print(Realm.Configuration.defaultConfiguration.fileURL!)
-        try! realm.write {
-            realm.add(createSerifModels())
-            realm.add(createMotionModels())
-        }
-    }
-    
-    static private func createSerifModels() -> Array<Serif> {
-        var serifModels: Array<Serif> = []
-        var id: Int = 1
-        for hiyoriSerif in HiyoriSerif.serifs {
-            for motionId in hiyoriSerif.motionIds {
-                let serif = Serif()
-                serif.id = id
-                serif.text = hiyoriSerif.text
-                serif.motionId = motionId
-                serif.type = hiyoriSerif.serifType.rawValue
-                serifModels.append(serif)
-                id += 1
+        if realm.objects(Motion.self).isEmpty {
+            try! realm.write {
+                realm.add(createMotionModels())
             }
         }
-        return serifModels
+        if realm.objects(Serif.self).isEmpty {
+            try! realm.write {
+                realm.add(createSerifModels(realm: realm))
+            }
+        }
     }
     
     static private func createMotionModels() -> Array<Motion> {
@@ -47,5 +36,22 @@ class DBInitializer {
             motionModels.append(motion)
         }
         return motionModels
+    }
+    
+    static private func createSerifModels(realm: Realm) -> Array<Serif> {
+        var serifModels: Array<Serif> = []
+        var id: Int = 1
+        for hiyoriSerif in HiyoriSerif.serifs {
+            for motionId in hiyoriSerif.motionIds {
+                let serif = Serif()
+                serif.id = id
+                serif.text = hiyoriSerif.text
+                serif.motion = realm.object(ofType: Motion.self, forPrimaryKey: motionId)!
+                serif.type = hiyoriSerif.serifType.rawValue
+                serifModels.append(serif)
+                id += 1
+            }
+        }
+        return serifModels
     }
 }

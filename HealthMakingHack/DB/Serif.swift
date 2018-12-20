@@ -13,7 +13,7 @@ class Serif: Object {
     @objc dynamic var id = 0
     @objc dynamic var type = SerifType.tapMotion.rawValue
     @objc dynamic var text = ""
-    @objc dynamic var motionId = 1
+    @objc dynamic var motion: Motion? = nil
     
     enum SerifType: Int {
         case tapMotion = 1
