@@ -29,10 +29,10 @@ class MainViewController: UIViewController {
         deleteAll()
         
         // GIFアニメーション表示
-        showGifAnimation(gifName: "hiyori_chan/a_idling(hiyori_m01)/idling.gif")
+        showGifAnimation(gifName: "idling")
         
         // セリフ表示用吹き出し表示
-        showBalloon(serif: "おはよー")
+        var commentLabel = showBalloon(serif: "おはよー")
         
     }
     
