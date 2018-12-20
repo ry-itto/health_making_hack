@@ -32,7 +32,7 @@ class MainViewController: UIViewController {
         showGifAnimation(gifName: "idling")
         
         // セリフ表示用吹き出し表示
-        var commentLabel = showBalloon(serif: "おはよー")
+     //   var commentLabel = showBalloon(serif: "おはよー")
         
     }
     
