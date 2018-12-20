@@ -15,8 +15,8 @@ class HealthKit {
     
     // 認証処理をする
     private func authentication(healthStore: HKHealthStore,
-                                writeType: Set<HKWorkoutType>?,
-                                readType: Set<HKWorkoutType>?) {
+                                writeType: Set<HKQuantityType>?,
+                                readType: Set<HKQuantityType>?) {
         healthStore.requestAuthorization(toShare: nil, read: readType, completion: { (success, error) in
             if success {
                 print("Health Auth Success")
@@ -65,6 +65,6 @@ class HealthKit {
     
     private func getSteps(startDate: Date, endDate: Date) {
         let type = HKSampleType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)
-        
+        let quantityType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)
     }
 }
