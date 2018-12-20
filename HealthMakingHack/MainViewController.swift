@@ -117,7 +117,8 @@ class MainViewController: UIViewController {
      */
     func showBalloon(serif: String) -> UILabel {
         let imageView = UIImageView(image: UIImage(named: "balloon_white_clear_orange.png"))
-        imageView.frame = CGRect(x: (view.bounds.size.width - 280) / 2, y: 400, width: 330, height: 150)
+        imageView.frame = CGRect(x: (view.bounds.size.width) / 2, y: 400, width: 330, height: 150)
+        imageView.center = view.center
         view.addSubview(imageView)
         
         let commentLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
