@@ -40,8 +40,13 @@
                         <constraint firstAttribute="height" constant="10" id="9Pa-dB-c3m"/>
                     </constraints>
                 </progressView>
+<<<<<<< HEAD
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="カウント１" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luc-Rg-h25">
                     <rect key="frame" x="112" y="69" width="202" height="21"/>
+=======
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luc-Rg-h25">
+                    <rect key="frame" x="136" y="69" width="85" height="21"/>
+>>>>>>> ffcbff8fd1f7a0680a591f632be962bb4c858490
                     <fontDescription key="fontDescription" name="Pomeranian-Regular" family="Pomeranian" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
