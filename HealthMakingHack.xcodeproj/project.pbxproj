@@ -67,8 +67,8 @@
 		BF73804121CB903E00FBF309 /* angry.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF73800F21CB903400FBF309 /* angry.gif */; };
 		BF73804221CB903E00FBF309 /* reversed_angry_16fps_640x1100.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF73801021CB903400FBF309 /* reversed_angry_16fps_640x1100.gif */; };
 		BF73804321CB903E00FBF309 /* angry_16fps_640x1103.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF73801121CB903400FBF309 /* angry_16fps_640x1103.gif */; };
+		BF73804521CC018600FBF309 /* balloon_white_clear_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = BF73804421CC018600FBF309 /* balloon_white_clear_orange.png */; };
 		BFBD69E221C75EFB000650F3 /* UIColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD69E121C75EFB000650F3 /* UIColorHex.swift */; };
-		BFE07CA621C8CBA800FC9B52 /* balloon_white_clear_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE07CA521C8CBA800FC9B52 /* balloon_white_clear_orange.png */; };
 		BFE07CAE21C8D6B200FC9B52 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE07CAC21C8D69600FC9B52 /* HealthKit.framework */; };
 		BFE07CAF21C8DA2800FC9B52 /* HealthKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE07CA721C8D61100FC9B52 /* HealthKitUI.framework */; };
  		CC5A4E5252511C96BCA489D4 /* Pods_HealthMakingHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38531A83B31CFE3FBF1CC67C /* Pods_HealthMakingHack.framework */; };
@@ -138,8 +138,8 @@
 		BF73800F21CB903400FBF309 /* angry.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = angry.gif; sourceTree = "<group>"; };
 		BF73801021CB903400FBF309 /* reversed_angry_16fps_640x1100.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = reversed_angry_16fps_640x1100.gif; sourceTree = "<group>"; };
 		BF73801121CB903400FBF309 /* angry_16fps_640x1103.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = angry_16fps_640x1103.gif; sourceTree = "<group>"; };
+		BF73804421CC018600FBF309 /* balloon_white_clear_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balloon_white_clear_orange.png; sourceTree = "<group>"; };
 		BFBD69E121C75EFB000650F3 /* UIColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorHex.swift; sourceTree = "<group>"; };
-		BFE07CA521C8CBA800FC9B52 /* balloon_white_clear_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = balloon_white_clear_orange.png; path = ../../../Desktop/balloon_white_clear_orange.png; sourceTree = "<group>"; };
 		BFE07CA721C8D61100FC9B52 /* HealthKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKitUI.framework; path = System/Library/Frameworks/HealthKitUI.framework; sourceTree = SDKROOT; };
 		BFE07CAB21C8D66800FC9B52 /* HealthMakingHack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthMakingHack.entitlements; sourceTree = "<group>"; };
 		BFE07CAC21C8D69600FC9B52 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -207,6 +207,7 @@
 		BF62C75621C5344F00C6A2D4 /* HealthMakingHack */ = {
 			isa = PBXGroup;
 			children = (
+				BF73804421CC018600FBF309 /* balloon_white_clear_orange.png */,
 				BF737FD021CB8D2C00FBF309 /* iPhoneX_XS.png.jpeg */,
 				BF737FCD21CB8AF000FBF309 /* Pomeranian-Regular.ttf */,
 				BFE07CAB21C8D66800FC9B52 /* HealthMakingHack.entitlements */,
@@ -475,7 +476,7 @@
 				BF73803621CB903E00FBF309 /* looped_thinking_16fps_640x1100.gif in Resources */,
 				BF73801D21CB903D00FBF309 /* 06.gif in Resources */,
 				BF73803421CB903E00FBF309 /* looped_smile_to_suprised_16fps_640x1101.gif in Resources */,
-				BFE07CA621C8CBA800FC9B52 /* balloon_white_clear_orange.png in Resources */,
+				BF73804521CC018600FBF309 /* balloon_white_clear_orange.png in Resources */,
 				BF73802A21CB903E00FBF309 /* smile_to_suprised.gif in Resources */,
 				BF73804121CB903E00FBF309 /* angry.gif in Resources */,
 				BF73803C21CB903E00FBF309 /* reversed_idling_smile_16fps_640x1100.gif in Resources */,
