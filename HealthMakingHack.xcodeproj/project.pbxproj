@@ -14,7 +14,6 @@
 		BF62C75F21C5345400C6A2D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF62C75E21C5345400C6A2D4 /* Assets.xcassets */; };
 		BF62C77321C5601800C6A2D4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62C77121C5601800C6A2D4 /* MainViewController.swift */; };
 		BF62C77421C5601800C6A2D4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF62C77221C5601800C6A2D4 /* MainViewController.xib */; };
-		BFB4485C21C73E5200A6F9B6 /* abokado_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = BFB4485B21C73E5200A6F9B6 /* abokado_gif.gif */; };
 		BFBD69E021C75C0C000650F3 /* hiyori_chan in Resources */ = {isa = PBXBuildFile; fileRef = BFBD69DF21C75C0C000650F3 /* hiyori_chan */; };
 		BFBD69E221C75EFB000650F3 /* UIColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD69E121C75EFB000650F3 /* UIColorHex.swift */; };
 		BFE07CAE21C8D6B200FC9B52 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE07CAC21C8D69600FC9B52 /* HealthKit.framework */; };
@@ -33,7 +32,6 @@
 		BF62C76321C5345400C6A2D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF62C77121C5601800C6A2D4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BF62C77221C5601800C6A2D4 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		BFB4485B21C73E5200A6F9B6 /* abokado_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = abokado_gif.gif; path = ../../../Documents/abokado_gif.gif; sourceTree = "<group>"; };
 		BFBD69DF21C75C0C000650F3 /* hiyori_chan */ = {isa = PBXFileReference; lastKnownFileType = folder; name = hiyori_chan; path = ../../../Downloads/hiyori_chan; sourceTree = "<group>"; };
 		BFBD69E121C75EFB000650F3 /* UIColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorHex.swift; sourceTree = "<group>"; };
 		BFE07CA721C8D61100FC9B52 /* HealthKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKitUI.framework; path = System/Library/Frameworks/HealthKitUI.framework; sourceTree = SDKROOT; };
@@ -120,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				BFBD69DF21C75C0C000650F3 /* hiyori_chan */,
-				BFB4485B21C73E5200A6F9B6 /* abokado_gif.gif */,
 			);
 			name = gif;
 			sourceTree = "<group>";
@@ -203,7 +200,6 @@
 				BFBD69E021C75C0C000650F3 /* hiyori_chan in Resources */,
 				CEB74D3D21C9F3F60046898F /* Pomeranian-Regular.ttf in Resources */,
 				BF62C75F21C5345400C6A2D4 /* Assets.xcassets in Resources */,
-				BFB4485C21C73E5200A6F9B6 /* abokado_gif.gif in Resources */,
 				BF62C77421C5601800C6A2D4 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,7 +342,7 @@
 				CODE_SIGN_ENTITLEMENTS = HealthMakingHack/HealthMakingHack.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SWTMD9F8VT;
+				DEVELOPMENT_TEAM = 2J4TB4X473;
 				INFOPLIST_FILE = HealthMakingHack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

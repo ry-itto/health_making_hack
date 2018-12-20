@@ -20,27 +20,14 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//<<<<<<< HEAD
-        let orange = UIColor(displayP3Red: 1.0, green: 0.5, blue: 0.0, alpha:1.0)
-        progressView?.trackTintColor = UIColor.white
-        progressView?.progressTintColor = orange
-        progressView?.setProgress(0.3, animated: false)
-=======
         
         // レイアウトの初期設定
         initLayout()
->>>>>>> layout
         
         // DBの内容を初期化
         //MARK: テストのため，使用している。本番では使わない。
         deleteAll()
         
-//<<<<<<< HEAD
-        ateButton?.backgroundColor = orange
-        ateButton?.layer.borderWidth = 1.0
-        ateButton?.layer.borderColor = UIColor.white.cgColor
-            //UIColor.black.cgColor
-=======
         // GIFアニメーション表示
         showGifAnimation(gifName: "hiyori_chan/a_idling(hiyori_m01)/idling.gif")
         
@@ -75,7 +62,6 @@ class MainViewController: UIViewController {
         ateButton?.backgroundColor = UIColor(hex: "FF7043")
         ateButton?.layer.borderWidth = 1.0
         ateButton?.layer.borderColor = UIColor(hex: "FF7043").cgColor
->>>>>>> layout
         ateButton?.layer.cornerRadius = 10.0
         ateButton?.setTitleColor(.white, for: .normal)
     }

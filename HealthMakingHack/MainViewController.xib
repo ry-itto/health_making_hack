@@ -17,7 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="HealthMakingHack" customModuleProvider="target">
             <connections>
-                <outlet property="ateButton" destination="qW2-35-9fi" id="lsT-kk-R2L"/>
+                <outlet property="ateButton" destination="qW2-35-9fi" id="JGR-VU-U2Y"/>
                 <outlet property="progressLabel" destination="luc-Rg-h25" id="FBM-UW-lOJ"/>
                 <outlet property="progressView" destination="WJJ-Vf-6cx" id="fUW-OA-RWq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -53,11 +53,11 @@
                         <constraint firstAttribute="height" constant="60" id="Gj8-Tg-Jcj"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Pomeranian-Regular" family="Pomeranian" pointSize="30"/>
-                    <state key="normal" title=" たべた！">
+                    <state key="normal">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="ateButtonTapped:" destination="-1" eventType="touchUpInside" id="EaL-ai-eJe"/>
+                        <action selector="ateButtonTapped:" destination="-1" eventType="touchUpInside" id="yG7-gB-UjF"/>
                     </connections>
                 </button>
             </subviews>
