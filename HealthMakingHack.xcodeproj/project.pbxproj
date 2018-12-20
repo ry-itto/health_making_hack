@@ -13,6 +13,9 @@
 		BF62C75F21C5345400C6A2D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF62C75E21C5345400C6A2D4 /* Assets.xcassets */; };
 		BF62C77321C5601800C6A2D4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62C77121C5601800C6A2D4 /* MainViewController.swift */; };
 		BF62C77421C5601800C6A2D4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF62C77221C5601800C6A2D4 /* MainViewController.xib */; };
+		BF72303721CC064C007D36C8 /* Motion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF72303621CC064C007D36C8 /* Motion.swift */; };
+		BF72303921CC07AC007D36C8 /* Seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF72303821CC07AC007D36C8 /* Seed.swift */; };
+		BF72303B21CC0F8C007D36C8 /* DBInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF72303A21CC0F8C007D36C8 /* DBInitializer.swift */; };
 		BF737FCF21CB8C2900FBF309 /* Serif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF737FCE21CB8C2900FBF309 /* Serif.swift */; };
 		BF737FD121CB8D2C00FBF309 /* iPhoneX_XS.png.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF737FD021CB8D2C00FBF309 /* iPhoneX_XS.png.jpeg */; };
 		BF737FD221CB8F6200FBF309 /* Pomeranian-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF737FCD21CB8AF000FBF309 /* Pomeranian-Regular.ttf */; };
@@ -84,6 +87,9 @@
 		BF62C76321C5345400C6A2D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF62C77121C5601800C6A2D4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BF62C77221C5601800C6A2D4 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		BF72303621CC064C007D36C8 /* Motion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motion.swift; sourceTree = "<group>"; };
+		BF72303821CC07AC007D36C8 /* Seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seed.swift; sourceTree = "<group>"; };
+		BF72303A21CC0F8C007D36C8 /* DBInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBInitializer.swift; sourceTree = "<group>"; };
 		BF737FCD21CB8AF000FBF309 /* Pomeranian-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pomeranian-Regular.ttf"; sourceTree = "<group>"; };
 		BF737FCE21CB8C2900FBF309 /* Serif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serif.swift; sourceTree = "<group>"; };
 		BF737FD021CB8D2C00FBF309 /* iPhoneX_XS.png.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iPhoneX_XS.png.jpeg; sourceTree = "<group>"; };
@@ -173,6 +179,9 @@
 			children = (
 				BF47727021C643F700287865 /* EatRecord.swift */,
 				BF737FCE21CB8C2900FBF309 /* Serif.swift */,
+				BF72303621CC064C007D36C8 /* Motion.swift */,
+				BF72303821CC07AC007D36C8 /* Seed.swift */,
+				BF72303A21CC0F8C007D36C8 /* DBInitializer.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -576,10 +585,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF47727121C643F700287865 /* EatRecord.swift in Sources */,
+				BF72303B21CC0F8C007D36C8 /* DBInitializer.swift in Sources */,
 				BFBD69E221C75EFB000650F3 /* UIColorHex.swift in Sources */,
 				BF62C75821C5344F00C6A2D4 /* AppDelegate.swift in Sources */,
 				BF62C77321C5601800C6A2D4 /* MainViewController.swift in Sources */,
 				BF3A71AF21C7619A007F1B22 /* CustomButton.swift in Sources */,
+				BF72303721CC064C007D36C8 /* Motion.swift in Sources */,
+				BF72303921CC07AC007D36C8 /* Seed.swift in Sources */,
 				BF737FCF21CB8C2900FBF309 /* Serif.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

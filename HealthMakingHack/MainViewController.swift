@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
     @IBOutlet var progressLabel: UILabel?
     @IBOutlet var ateButton: UIButton?
 //    let realm: Realm = try! Realm()
-    let realm: Realm = try! Realm(configuration: Realm.Configuration(schemaVersion: 1))
+    let realm: Realm = try! Realm(configuration: Realm.Configuration(schemaVersion: 2))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +24,8 @@ class MainViewController: UIViewController {
         // レイアウトの初期設定
         initLayout()
         
-        // DBの内容を初期化
-        //MARK: テストのため，使用している。本番では使わない。
-        deleteAll()
+        // DBの内容を初期化. マスタデータまで消えるので注意。
+        // deleteAll()
         
         // GIFアニメーション表示
         showGifAnimation(gifName: "idling")
