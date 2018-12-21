@@ -58,6 +58,8 @@ class MainViewController: UIViewController {
     
     // 「食べた！」ボタンがタップされたときの動作
     @IBAction func ateButtonTapped(_ sender: UIButton) {
+        guard EatTime.dontEatYet() else { return }
+        
         let record: EatRecord = EatRecord()
         record.ateDateString = todayToString()
         
