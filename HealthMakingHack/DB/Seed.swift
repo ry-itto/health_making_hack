@@ -33,18 +33,18 @@ struct HiyoriSerif {
         (Serif.SerifType.tapMotion, "寝る前の3時間以内は食べたり飲んだりするのはお勧めしません", [1, 3, 10]),
         (Serif.SerifType.tapMotion, "食事前に小腹が空いたらフルーツやヨーグルトなどおすすめです。", [1, 3, 10]),
         (Serif.SerifType.hunger, "腹ペコで力がでないです...", [9]),
-        (Serif.SerifType.hunger, "なんだか気分が優れません...", [9]),
+        (Serif.SerifType.hunger, "お腹が空いて　なんだか気分が優れません...", [9]),
         (Serif.SerifType.hunger, "食べないのですか...?", [9]),
         (Serif.SerifType.hunger, "まだ...ですか??", [9]),
-        (Serif.SerifType.full, "よく噛んで食べましたか...?", [5, 6, 7]),
-        (Serif.SerifType.full, "次のお食事は4、5時間後を目安にすると胃に優しいですよ~。", [5, 6, 7]),
+        (Serif.SerifType.full, "嬉しいです！よく噛んで食べましたか...?", [5, 6, 7]),
+        (Serif.SerifType.full, "ありがとうございます！次のお食事は4、5時間後を目安にすると胃に優しいですよ~。", [5, 6, 7]),
         (Serif.SerifType.full, "フゥ...私もお腹いっぱいです!", [5, 6, 7]),
-        (Serif.SerifType.nightHunger, "太るよ!", [3, 8]),
-        (Serif.SerifType.nightHunger, "この時間帯は体が脂肪を蓄えやすいんです!", [3, 8]),
-        (Serif.SerifType.nightHunger, "もう!", [3, 8]),
-        (Serif.SerifType.nightHunger, "このブタ野郎!", [3, 8]),
+        (Serif.SerifType.nightHunger, "８時以降は太るよ!", [3, 8]),
+        (Serif.SerifType.nightHunger, "この時間帯は体が脂肪を蓄えやすいのでガマンです!", [3, 8]),
+        (Serif.SerifType.nightHunger, "もう!8時以降は食べないでください！", [3, 8]),
+        (Serif.SerifType.nightHunger, "この時間に食べるとブタさんみたいになりますよ!", [3, 8]),
         (Serif.SerifType.less, "食べてくれないと心配です...", [4]),
         (Serif.SerifType.less, "明日はちゃんと3食きっちり食べてくださいね", [4]),
-        (Serif.SerifType.less, "力が...出ない...です...", [4])
+        (Serif.SerifType.less, "力が...出ない...です...次は食べてくださいね", [4])
     ]
 }
