@@ -31,7 +31,7 @@ class MainViewController: UIViewController {
         initLayout()
         
         // DBの内容を初期化。EatRecordのみを削除
-//        deleteAll()
+        deleteAll()
         
         // GIFアニメーション表示
         showGifAnimation(gifName: "idling")
@@ -150,8 +150,8 @@ class MainViewController: UIViewController {
     // 全レコードを削除
     func deleteAll() {
         try! realm.write {
-            realm.deleteAll()
-//            realm.delete(realm.objects(EatRecord.self))
+//            realm.deleteAll()
+            realm.delete(realm.objects(EatRecord.self))
         }
     }
     
@@ -201,6 +201,7 @@ class MainViewController: UIViewController {
         commentLabel.textAlignment = .center
         commentLabel.numberOfLines = 0
         commentLabel.sizeToFit()
+        commentLabel.font = UIFont.boldSystemFont(ofSize: 14)
         imageView.addSubview(commentLabel)
         
         return commentLabel
@@ -223,6 +224,7 @@ class MainViewController: UIViewController {
         
         gifView?.gifImage = UIImage(gifName: serif?.motion?.motionPath ?? "")
         commentLabel?.text = serif?.text
+        commentLabel?.font = UIFont.boldSystemFont(ofSize: 15)
     }
     
     // 「食べる！」ボタンがタップされた時の処理
