@@ -67,6 +67,21 @@ struct EatTime {
         return now.timeIntervalSince(twentyOclock) > 0.0 && results.isEmpty
     }
     
+    // 現在の時間帯に食事をしたかどうかを判定します。
+    static func dontEatYet() -> Bool {
+        if isBreakFastTime() {
+            return realm.objects(EatRecord.self)
+                .filter("ateDate >= %@ AND ateDate <= %@", fiveOclock, tenOclock).isEmpty
+        } else if isLunchTime() {
+            return realm.objects(EatRecord.self)
+                .filter("ateDate >= %@ AND ateDate <= %@", elevenOclock, fourteenOclock).isEmpty
+        } else if isDinnertime() {
+            return realm.objects(EatRecord.self)
+                .filter("ateDate >= %@ AND ateDate <= %@", sixteenOclock, twentyOclock).isEmpty
+        }
+        return false
+    }
+    
     // 日付はその日のままで，H, M, Sのみを指定して新しくDateオブジェクトを作成し，返却します。返り値はOptional
     private static func setTodayTime(hour: Int, minute: Int, second: Int) -> Date? {
         let calendar: Calendar = Calendar.current
