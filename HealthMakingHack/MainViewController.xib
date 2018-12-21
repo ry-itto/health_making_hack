@@ -17,7 +17,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="HealthMakingHack" customModuleProvider="target">
             <connections>
-                <outlet property="ateButton" destination="qW2-35-9fi" id="lsT-kk-R2L"/>
+                <outlet property="ateButton" destination="qW2-35-9fi" id="JGR-VU-U2Y"/>
+                <outlet property="labelClock" destination="wAZ-T3-qa9" id="pX8-2f-pgf"/>
                 <outlet property="progressLabel" destination="luc-Rg-h25" id="FBM-UW-lOJ"/>
                 <outlet property="progressView" destination="WJJ-Vf-6cx" id="fUW-OA-RWq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -41,7 +42,7 @@
                     </constraints>
                 </progressView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luc-Rg-h25">
-                    <rect key="frame" x="136" y="69" width="85" height="21"/>
+                    <rect key="frame" x="136" y="69" width="42" height="21"/>
                     <fontDescription key="fontDescription" name="Pomeranian-Regular" family="Pomeranian" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -52,14 +53,21 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="Gj8-Tg-Jcj"/>
                     </constraints>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                    <state key="normal" title="食べた！">
+                    <fontDescription key="fontDescription" name="Pomeranian-Regular" family="Pomeranian" pointSize="30"/>
+                    <state key="normal" title="たべた！">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="ateButtonTapped:" destination="-1" eventType="touchUpInside" id="EaL-ai-eJe"/>
+                        <action selector="ateButtonTapped:" destination="-1" eventType="touchUpInside" id="yG7-gB-UjF"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="とけい" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="500" translatesAutoresizingMaskIntoConstraints="NO" id="wAZ-T3-qa9">
+                    <rect key="frame" x="20" y="136" width="406" height="183"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Pomeranian-Regular" family="Pomeranian" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>

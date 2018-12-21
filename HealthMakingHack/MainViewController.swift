@@ -20,6 +20,33 @@ class MainViewController: UIViewController {
     let realm: Realm = try! Realm(configuration: Realm.Configuration(schemaVersion: 3))
     var gifView: UIImageView?
     var commentLabel: UILabel?
+    
+    // 時刻を表示するラベル
+    @IBOutlet var labelClock: UILabel!//remove bar
+    
+    // 現在時刻を表示する処理
+    @objc func displayClock() {
+        // 現在時刻を「HH:MM:SS」形式で取得する
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        var displayTime = formatter.string(from: Date())    // Date()だけで現在時刻を表す
+        
+        // 0から始まる時刻の場合は「 H:MM:SS」形式にする
+        if displayTime.hasPrefix("0") {
+            // 最初に見つかった0だけ削除(スペース埋め)される
+            if let range = displayTime.range(of: "0") {
+                displayTime.replaceSubrange(range, with: " ")
+            }
+        }
+        // ラベルに表示
+        labelClock.text = displayTime
+        labelClock.adjustsFontSizeToFitWidth = true//font のサイズ
+        self.view.bringSubviewToFront(labelClock)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +80,9 @@ class MainViewController: UIViewController {
                 print("condition: less")
             }
         })
+        // 1秒ごとに「displayClock」を実行する
+        let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(displayClock), userInfo: nil, repeats: true)
+        timer.fire()    // 無くても動くけどこれが無いと初回の実行がラグる
         
     }
     
