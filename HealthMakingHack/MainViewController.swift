@@ -11,12 +11,15 @@ import RealmSwift
 import SwiftyGif
 
 class MainViewController: UIViewController {
+
+    let tenMinites: Double = 600000
     
     @IBOutlet var progressView: UIProgressView?
     @IBOutlet var progressLabel: UILabel?
     @IBOutlet var ateButton: UIButton?
-//    let realm: Realm = try! Realm()
-    let realm: Realm = try! Realm(configuration: Realm.Configuration(schemaVersion: 1))
+    let realm: Realm = try! Realm(configuration: Realm.Configuration(schemaVersion: 3))
+    var gifView: UIImageView?
+    var commentLabel: UILabel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +27,33 @@ class MainViewController: UIViewController {
         // レイアウトの初期設定
         initLayout()
         
-        // DBの内容を初期化
-        //MARK: テストのため，使用している。本番では使わない。
-        deleteAll()
+        // DBの内容を初期化。EatRecordのみを削除
+         deleteAll()
         
         // GIFアニメーション表示
         showGifAnimation(gifName: "idling")
         
         // セリフ表示用吹き出し表示
      //   var commentLabel = showBalloon(serif: "おはよー")
+        commentLabel = showBalloon(serif: "食事前に小腹が空いたらフルーツやヨーグルトなどおすすめです。")
+        
+        Timer.scheduledTimer(withTimeInterval: 60.0, repeats: true, block: { (time) in
+            if self.getLatestEatRecord()?.ateDate.timeIntervalSinceNow
+                .isLessThanOrEqualTo(self.tenMinites) ?? false {
+                self.ateButtonTapped()
+                print("condition: full")
+            } else if Date().timeIntervalSince(EatTime.tenOclock).isLessThanOrEqualTo(self.tenMinites) ||
+                Date().timeIntervalSince(EatTime.fourteenOclock).isLessThanOrEqualTo(self.tenMinites) ||
+                Date().timeIntervalSince(EatTime.twentyOclock).isLessThanOrEqualTo(self.tenMinites) {
+                self.untilTimeOver()
+                print("condition: hunger")
+            } else if EatTime.didnotTakeBreakFast() ||
+                EatTime.didnotTakeLunch() ||
+                EatTime.didnotTakeDinner() {
+                self.didnotEat()
+                print("condition: less")
+            }
+        })
         
     }
     
@@ -49,21 +70,33 @@ class MainViewController: UIViewController {
         let eatRecordCountToday = countEatRecordsFromDay(dayString: todayToString())
         progressLabel?.text = "\(eatRecordCountToday) / 3"
         progressView?.setProgress(Float(0.334 * Double(eatRecordCountToday)), animated: true)
+        
+        // 食べた時間が時間時間外かどうか判定
+        if EatTime.isSupperTime() {
+            overEatTime()
+            print("condition: nightEating")
+        } else {
+            ateButtonTapped()
+            print("condition: full")
+        }
     }
+
     
     // 画面レイアウトの初期化
     func initLayout() {
-        progressView?.trackTintColor = .white
-        progressView?.progressTintColor = UIColor(hex: "FF7043")
-        progressView?.setProgress(0, animated: false)
+        guard let pv = progressView, let ab = ateButton else { return }
+        
+        pv.trackTintColor = .white
+        pv.progressTintColor = UIColor(hex: "FF7043")
+        pv.setProgress(0, animated: false)
         
         progressLabel?.text = "0 / 3"
         
-        ateButton?.backgroundColor = UIColor(hex: "FF7043")
-        ateButton?.layer.borderWidth = 1.0
-        ateButton?.layer.borderColor = UIColor(hex: "FF7043").cgColor
-        ateButton?.layer.cornerRadius = 10.0
-        ateButton?.setTitleColor(.white, for: .normal)
+        ab.backgroundColor = UIColor(hex: "FF7043")
+        ab.layer.borderWidth = 1.0
+        ab.layer.borderColor = UIColor(hex: "FF7043").cgColor
+        ab.layer.cornerRadius = 10.0
+        ab.setTitleColor(.white, for: .normal)
     }
     
     /**
@@ -86,7 +119,8 @@ class MainViewController: UIViewController {
     // 全レコードを削除
     func deleteAll() {
         try! realm.write {
-            realm.deleteAll()
+//            realm.deleteAll()
+            realm.delete(realm.objects(EatRecord.self))
         }
     }
     
@@ -103,11 +137,21 @@ class MainViewController: UIViewController {
      * @param gifName gifファイルへのパス
      */
     func showGifAnimation(gifName: String) {
-        let gif = UIImage(gifName: gifName)
-        let imageview = UIImageView(gifImage: gif, loopCount: -1) // Use -1 for infinite loop
-        imageview.frame = CGRect(x: 200, y: 300, width: 500, height: 800)
-        imageview.center = view.center
-        view.addSubview(imageview)
+        
+        // GIF画像がタップされたことを検知するものを定義
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self,                                                  action: #selector(hiyoriChanTapped(tapGestureRecognizer:)))
+        
+        // GIF画像を表示するための設定
+        let gifImage = UIImage(gifName: gifName)
+        gifView = UIImageView(gifImage: gifImage, loopCount: -1) // Use -1 for infinite loop
+        guard let gv = gifView else { return }
+        gv.frame = CGRect(x: 200, y: 300, width: 500, height: 800)
+        gv.center = view.center
+        gv.isUserInteractionEnabled = true
+        gv.addGestureRecognizer(tapGestureRecognizer)
+        
+        // メインビューに表示
+        view.addSubview(gv)
         view.bringSubviewToFront(ateButton!)
     }
     
@@ -121,11 +165,57 @@ class MainViewController: UIViewController {
         imageView.center = view.center
         view.addSubview(imageView)
         
-        let commentLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+        let commentLabel = UILabel(frame: CGRect(x: 50, y: 50, width: 200, height: 100))
         commentLabel.text = serif
         commentLabel.textAlignment = .center
+        commentLabel.numberOfLines = 0
+        commentLabel.sizeToFit()
         imageView.addSubview(commentLabel)
         
         return commentLabel
+    }
+    
+    /**
+     * GIF画像がタップされた時の動作
+     */
+    @objc func hiyoriChanTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        gifImageChangeAndLabelChange(type: Serif.SerifType.tapMotion.rawValue)
+    }
+    
+    /**
+     * GIF画像，吹き出し内メッセージを変更するメソッド
+     * typeからランダムに変更する
+     */
+    private func gifImageChangeAndLabelChange(type: Int) {
+        let serifs: Results<Serif> = realm.objects(Serif.self).filter("type == \(type)")
+        let serif: Serif? = serifs.randomElement()
+        
+        gifView?.gifImage = UIImage(gifName: serif?.motion?.motionPath ?? "")
+        commentLabel?.text = serif?.text
+    }
+    
+    // 「食べる！」ボタンがタップされた時の処理
+    func ateButtonTapped() {
+        gifImageChangeAndLabelChange(type: Serif.SerifType.full.rawValue)
+    }
+    
+    // 推奨時間の10分前からちょうどその時間になるまでの処理
+    func untilTimeOver() {
+        gifImageChangeAndLabelChange(type: Serif.SerifType.hunger.rawValue)
+    }
+    
+    // 夜間に食事した場合の処理
+    func overEatTime() {
+        gifImageChangeAndLabelChange(type: Serif.SerifType.nightHunger.rawValue)
+    }
+    
+    // 食事時間帯に食べなかった時の処理
+    func didnotEat() {
+        gifImageChangeAndLabelChange(type: Serif.SerifType.less.rawValue)
+    }
+    
+    // EatRecordの日時が最後のものを取得します。
+    func getLatestEatRecord() -> EatRecord? {
+        return realm.objects(EatRecord.self).sorted(byKeyPath: "ateDate", ascending: false).first
     }
 }
