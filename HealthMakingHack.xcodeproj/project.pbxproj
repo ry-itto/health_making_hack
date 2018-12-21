@@ -75,7 +75,6 @@
 		BFBD69E221C75EFB000650F3 /* UIColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD69E121C75EFB000650F3 /* UIColorHex.swift */; };
 		BFE07CAE21C8D6B200FC9B52 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE07CAC21C8D69600FC9B52 /* HealthKit.framework */; };
 		BFE07CAF21C8DA2800FC9B52 /* HealthKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE07CA721C8D61100FC9B52 /* HealthKitUI.framework */; };
- 		CC5A4E5252511C96BCA489D4 /* Pods_HealthMakingHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38531A83B31CFE3FBF1CC67C /* Pods_HealthMakingHack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,7 +150,6 @@
 		BFE07CA721C8D61100FC9B52 /* HealthKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKitUI.framework; path = System/Library/Frameworks/HealthKitUI.framework; sourceTree = SDKROOT; };
 		BFE07CAB21C8D66800FC9B52 /* HealthMakingHack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthMakingHack.entitlements; sourceTree = "<group>"; };
 		BFE07CAC21C8D69600FC9B52 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		C8A1E56664B514A8A516A59B /* Pods-HealthMakingHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthMakingHack.release.xcconfig"; path = "Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,159 +231,6 @@
 				BF62C77221C5601800C6A2D4 /* MainViewController.xib */,
 			);
 			path = HealthMakingHack;
-			sourceTree = "<group>";
-		};
-		BF737FD321CB903300FBF309 /* hiyori_chan */ = {
-			isa = PBXGroup;
-			children = (
-				BF737FD421CB903300FBF309 /* g_suprised(hiyori_m07) */,
-				BF737FD821CB903300FBF309 /* j_sad(hiyori_m10) */,
-				BF737FDC21CB903300FBF309 /* Test */,
-				BF737FE721CB903400FBF309 /* f_feeling_good(hiyori_m06) */,
-				BF737FEB21CB903400FBF309 /* d_worried(hiyori_m04) */,
-				BF737FEF21CB903400FBF309 /* e_smile_to_suprised(hiyori_m05) */,
-				BF737FF321CB903400FBF309 /* h_smiling(hiyori_08) */,
-				BF737FF721CB903400FBF309 /* a_idling(hiyori_m01) */,
-				BF737FFB21CB903400FBF309 /* looped */,
-				BF73800621CB903400FBF309 /* b_idling_smiling(hiyori_m02) */,
-				BF73800A21CB903400FBF309 /* c_thinking(hiyori_m03) */,
-				BF73800E21CB903400FBF309 /* i_angry(hiyori_m09) */,
-			);
-			path = hiyori_chan;
-			sourceTree = "<group>";
-		};
-		BF737FD421CB903300FBF309 /* g_suprised(hiyori_m07) */ = {
-			isa = PBXGroup;
-			children = (
-				BF737FD521CB903300FBF309 /* a_suprised_16fps_640x1100.gif */,
-				BF737FD621CB903300FBF309 /* reversed_suprised_16fps_640x1100.gif */,
-				BF737FD721CB903300FBF309 /* supirsed.gif */,
-			);
-			path = "g_suprised(hiyori_m07)";
-			sourceTree = "<group>";
-		};
-		BF737FD821CB903300FBF309 /* j_sad(hiyori_m10) */ = {
-			isa = PBXGroup;
-			children = (
-				BF737FD921CB903300FBF309 /* reversed_sad_16fps_640x1100.gif */,
-				BF737FDA21CB903300FBF309 /* sad.gif */,
-				BF737FDB21CB903300FBF309 /* sad_16fps_640x1104.gif */,
-			);
-			path = "j_sad(hiyori_m10)";
-			sourceTree = "<group>";
-		};
-		BF737FDC21CB903300FBF309 /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				BF737FDD21CB903300FBF309 /* 09.gif */,
-				BF737FDE21CB903300FBF309 /* 08.gif */,
-				BF737FDF21CB903400FBF309 /* 01.gif */,
-				BF737FE021CB903400FBF309 /* 03.gif */,
-				BF737FE121CB903400FBF309 /* 02.gif */,
-				BF737FE221CB903400FBF309 /* 06.gif */,
-				BF737FE321CB903400FBF309 /* 07.gif */,
-				BF737FE421CB903400FBF309 /* 05.gif */,
-				BF737FE521CB903400FBF309 /* 10.gif */,
-				BF737FE621CB903400FBF309 /* 04.gif */,
-			);
-			path = Test;
-			sourceTree = "<group>";
-		};
-		BF737FE721CB903400FBF309 /* f_feeling_good(hiyori_m06) */ = {
-			isa = PBXGroup;
-			children = (
-				BF737FE821CB903400FBF309 /* reversed_feeling_good_16fps_640x1100.gif */,
-				BF737FE921CB903400FBF309 /* feeling_good_16fps_640x1100.gif */,
-				BF737FEA21CB903400FBF309 /* feeling_good.gif */,
-			);
-			path = "f_feeling_good(hiyori_m06)";
-			sourceTree = "<group>";
-		};
-		BF737FEB21CB903400FBF309 /* d_worried(hiyori_m04) */ = {
-			isa = PBXGroup;
-			children = (
-				BF737FEC21CB903400FBF309 /* worried.gif */,
-				BF737FED21CB903400FBF309 /* worried_16fps_640x1100.gif */,
-				BF737FEE21CB903400FBF309 /* reversed_worried_16fps_640x1100.gif */,
-			);
-			path = "d_worried(hiyori_m04)";
-			sourceTree = "<group>";
-		};
-		BF737FEF21CB903400FBF309 /* e_smile_to_suprised(hiyori_m05) */ = {
-			isa = PBXGroup;
-			children = (
-				BF737FF021CB903400FBF309 /* reversed_smile_to_suprised_16fps_640x1100.gif */,
-				BF737FF121CB903400FBF309 /* smile_to_suprised_16fps_640x1100.gif */,
-				BF737FF221CB903400FBF309 /* smile_to_suprised.gif */,
-			);
-			path = "e_smile_to_suprised(hiyori_m05)";
-			sourceTree = "<group>";
-		};
-		BF737FF321CB903400FBF309 /* h_smiling(hiyori_08) */ = {
-			isa = PBXGroup;
-			children = (
-				BF737FF421CB903400FBF309 /* reversed_smiling_16fps_640x1100.gif */,
-				BF737FF521CB903400FBF309 /* smiling_16fps_640x1102.gif */,
-				BF737FF621CB903400FBF309 /* smiling.gif */,
-			);
-			path = "h_smiling(hiyori_08)";
-			sourceTree = "<group>";
-		};
-		BF737FF721CB903400FBF309 /* a_idling(hiyori_m01) */ = {
-			isa = PBXGroup;
-			children = (
-				BF737FF821CB903400FBF309 /* idling.gif */,
-				BF737FF921CB903400FBF309 /* idling_16fps_640x1100.gif */,
-				BF737FFA21CB903400FBF309 /* reversed_idling_16fps_640x1100.gif */,
-			);
-			path = "a_idling(hiyori_m01)";
-			sourceTree = "<group>";
-		};
-		BF737FFB21CB903400FBF309 /* looped */ = {
-			isa = PBXGroup;
-			children = (
-				BF737FFC21CB903400FBF309 /* looped_sad_16fps_640x1105.gif */,
-				BF737FFD21CB903400FBF309 /* looped_feeling_good_16fps_640x1100.gif */,
-				BF737FFE21CB903400FBF309 /* looped_idling_16fps_640x1100.gif */,
-				BF737FFF21CB903400FBF309 /* looped_smile_to_suprised_16fps_640x1101.gif */,
-				BF73800021CB903400FBF309 /* looped_idling_smiling_16fps_640x1101.gif */,
-				BF73800121CB903400FBF309 /* looped_thinking_16fps_640x1100.gif */,
-				BF73800221CB903400FBF309 /* looped_worried_16fps_640x1100.gif */,
-				BF73800321CB903400FBF309 /* looped_suprised_16fps_640x1100.gif */,
-				BF73800421CB903400FBF309 /* looped_angry_16fps_640x1106.gif */,
-				BF73800521CB903400FBF309 /* looped_smiling_16fps_640x1107.gif */,
-			);
-			path = looped;
-			sourceTree = "<group>";
-		};
-		BF73800621CB903400FBF309 /* b_idling_smiling(hiyori_m02) */ = {
-			isa = PBXGroup;
-			children = (
-				BF73800721CB903400FBF309 /* idling_smile_16fps_640x1100.gif */,
-				BF73800821CB903400FBF309 /* reversed_idling_smile_16fps_640x1100.gif */,
-				BF73800921CB903400FBF309 /* idling_smile.gif */,
-			);
-			path = "b_idling_smiling(hiyori_m02)";
-			sourceTree = "<group>";
-		};
-		BF73800A21CB903400FBF309 /* c_thinking(hiyori_m03) */ = {
-			isa = PBXGroup;
-			children = (
-				BF73800B21CB903400FBF309 /* reversed_thinking_16fps_640x1100.gif */,
-				BF73800C21CB903400FBF309 /* thinking.gif */,
-				BF73800D21CB903400FBF309 /* thinking_16fps_640x1100.gif */,
-			);
-			path = "c_thinking(hiyori_m03)";
-			sourceTree = "<group>";
-		};
-		BF73800E21CB903400FBF309 /* i_angry(hiyori_m09) */ = {
-			isa = PBXGroup;
-			children = (
-				BF73800F21CB903400FBF309 /* angry.gif */,
-				BF73801021CB903400FBF309 /* reversed_angry_16fps_640x1100.gif */,
-				BF73801121CB903400FBF309 /* angry_16fps_640x1103.gif */,
-			);
-			path = "i_angry(hiyori_m09)";
 			sourceTree = "<group>";
 		};
 		BFB4485A21C73DE400A6F9B6 /* gif */ = {
@@ -561,7 +406,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
@@ -576,7 +421,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HealthMakingHack/Pods-HealthMakingHack-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
