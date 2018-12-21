@@ -78,6 +78,8 @@ struct EatTime {
         } else if isDinnertime() {
             return realm.objects(EatRecord.self)
                 .filter("ateDate >= %@ AND ateDate <= %@", sixteenOclock, twentyOclock).isEmpty
+        } else if isSupperTime() {
+            return true
         }
         return false
     }
