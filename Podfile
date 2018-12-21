@@ -6,5 +6,6 @@ target 'HealthMakingHack' do
   use_frameworks!
 
   # Pods for HealthMakingHack
-  pod 'MMDSceneKit'
+  pod 'RealmSwift'
+  pod 'SwiftyGif'
 end
