@@ -13,7 +13,43 @@ import SwiftyGif
 class MainViewController: UIViewController {
 
     let tenMinites: Double = 600000
+/////
+    // 時刻を表示するラベル
+    @IBOutlet var labelClock: UILabel!//remove bar
+   
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
+    // 現在時刻を表示する処理
+    @objc func displayClock() {
+        // 現在時刻を「HH:MM:SS」形式で取得する
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        var displayTime = formatter.string(from: Date())    // Date()だけで現在時刻を表す
+        
+        // 0から始まる時刻の場合は「 H:MM:SS」形式にする
+        if displayTime.hasPrefix("0") {
+            // 最初に見つかった0だけ削除(スペース埋め)される
+            if let range = displayTime.range(of: "0") {
+                displayTime.replaceSubrange(range, with: " ")
+            }
+        }
+        
+        // ラベルに表示
+        labelClock.text = displayTime
+        labelClock.adjustsFontSizeToFitWidth = true//font のサイズ
+        self.view.bringSubviewToFront(labelClock)
+        
+    }
+    
+    
+    
+    
+    
+    
+  /////
     @IBOutlet var progressView: UIProgressView?
     @IBOutlet var progressLabel: UILabel?
     @IBOutlet var ateButton: UIButton?
@@ -54,7 +90,14 @@ class MainViewController: UIViewController {
                 print("condition: less")
             }
         })
+        ///
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
         
+        // 1秒ごとに「displayClock」を実行する
+        let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(displayClock), userInfo: nil, repeats: true)
+        timer.fire()    // 無くても動くけどこれが無いと初回の実行がラグる
+        ///
     }
     
     // 「食べた！」ボタンがタップされたときの動作
@@ -219,3 +262,5 @@ class MainViewController: UIViewController {
         return realm.objects(EatRecord.self).sorted(byKeyPath: "ateDate", ascending: false).first
     }
 }
+
+
