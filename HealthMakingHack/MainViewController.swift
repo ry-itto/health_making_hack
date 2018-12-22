@@ -44,9 +44,9 @@ class MainViewController: UIViewController {
                 .isLessThanOrEqualTo(self.tenMinites) ?? false {
                 self.ateButtonTapped()
                 print("condition: full")
-            } else if Date().timeIntervalSince(EatTime.tenOclock).isLessThanOrEqualTo(self.tenMinites) ||
-                Date().timeIntervalSince(EatTime.fourteenOclock).isLessThanOrEqualTo(self.tenMinites) ||
-                Date().timeIntervalSince(EatTime.twentyOclock).isLessThanOrEqualTo(self.tenMinites) {
+            } else if Date().timeIntervalSince(EatTime.breakFactEnd).isLessThanOrEqualTo(self.tenMinites) ||
+                Date().timeIntervalSince(EatTime.lunchEnd).isLessThanOrEqualTo(self.tenMinites) ||
+                Date().timeIntervalSince(EatTime.dinnerEnd).isLessThanOrEqualTo(self.tenMinites) {
                 self.untilTimeOver()
                 print("condition: hunger")
             } else if EatTime.didnotTakeBreakFast() ||
